@@ -29,15 +29,31 @@
 		9C7978622CCA64B1001252BE /* WKQatarAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKQatarAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9CEDC9902CDA29070080CF4A /* Exceptions for "WKQatarApp" folder in "WKQatarApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WKQatarAppTests/WKQatarAppTests.swift,
+			);
+			target = 9C7978462CCA64B0001252BE /* WKQatarApp */;
+		};
+		9CEDC9912CDA29070080CF4A /* Exceptions for "WKQatarApp" folder in "WKQatarAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WKQatarAppTests/WKQatarAppTests.swift,
+			);
+			target = 9C7978572CCA64B1001252BE /* WKQatarAppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9C7978492CCA64B0001252BE /* WKQatarApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9CEDC9902CDA29070080CF4A /* Exceptions for "WKQatarApp" folder in "WKQatarApp" target */,
+				9CEDC9912CDA29070080CF4A /* Exceptions for "WKQatarApp" folder in "WKQatarAppTests" target */,
+			);
 			path = WKQatarApp;
-			sourceTree = "<group>";
-		};
-		9C79785B2CCA64B1001252BE /* WKQatarAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WKQatarAppTests;
 			sourceTree = "<group>";
 		};
 		9C7978652CCA64B1001252BE /* WKQatarAppUITests */ = {
@@ -76,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				9C7978492CCA64B0001252BE /* WKQatarApp */,
-				9C79785B2CCA64B1001252BE /* WKQatarAppTests */,
 				9C7978652CCA64B1001252BE /* WKQatarAppUITests */,
 				9C7978482CCA64B0001252BE /* Products */,
 			);
@@ -129,9 +144,6 @@
 			);
 			dependencies = (
 				9C79785A2CCA64B1001252BE /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				9C79785B2CCA64B1001252BE /* WKQatarAppTests */,
 			);
 			name = WKQatarAppTests;
 			packageProductDependencies = (
