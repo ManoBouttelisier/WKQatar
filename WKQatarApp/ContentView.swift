@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    var wkResultDatastore = WKResultsDatastore()
+    @Environment(WKResultsDatastore.self) private var wkResultDatastore
     @State var selectedCountry: String = ""
-
+    @State var selectedMatch: String = ""
+    @State var selectedLocation: String = ""
     var body: some View {
 
             
@@ -27,7 +28,7 @@ struct ContentView: View {
                                     
                                 }
                 if(selectedCountry != ""){
-                    NavigationLink(destination: ResultsView(selectedCountry: $selectedCountry)) {
+                    NavigationLink(destination: ResultsView(selectedCountry: $selectedCountry, selectedMatch: selectedMatch, selectedLocation: selectedLocation)) {
                         Text("Next")
                         
                     }
@@ -37,8 +38,4 @@ struct ContentView: View {
         }
         .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }

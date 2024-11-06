@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ListStadionView: View {
+    @Environment(WKResultsDatastore.self) private var wkResultDatastore
+    @Binding var selectedLocation: String
     var body: some View {
-        let wkResultDatastore = WKResultsDatastore()
-        @State var selectedLocation: String = ""
-        
+  //      let wkResultDatastore = WKResultsDatastore()
         NavigationStack {
             List(wkResultDatastore.getAllLocations(),id: \.self, selection: $selectedLocation) { country in
                                 if(selectedLocation == country){
@@ -23,8 +23,4 @@ struct ListStadionView: View {
                             }
         }
     }
-}
-
-#Preview {
-    ListStadionView()
 }
